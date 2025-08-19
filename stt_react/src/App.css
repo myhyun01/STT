@@ -1,0 +1,350 @@
+/* 앱 전체 배경 및 기본 스타일 */
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 사이드바 */
+.sidebar {
+  width: 60px;
+  background-color: #f5f5f5;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.viewer-button {
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #3F51B5;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+.viewer-button:hover {
+  color: #5c6bc0;
+}
+
+/* 환경설정 버튼 위치 */
+.settings-button-wrapper {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+.settings-button-wrapper > button {
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #3F51B5;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+.settings-button-wrapper > button:hover {
+  color: #5c6bc0;
+}
+
+/* 상단 헤더 */
+.top-header {
+  height: 50px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  margin-left: 60px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: 0.12em;
+  color: #3F51B5;
+  user-select: none;
+  text-shadow:
+    0 0 8px #c5cae9,
+    0 0 18px #c5cae9,
+    0 0 30px #c5cae9;
+}
+
+/* top right buttons */
+.top-right-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.header-icon-button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #3F51B5;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.header-icon-button:hover {
+  color: #5c6bc0;
+}
+
+.auth-button {
+  background: #3F51B5;
+  border: none;
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease;
+}
+.auth-button:hover {
+  background: #5c6bc0;
+}
+
+/* 메인 콘텐츠 영역 */
+.main-content {
+  margin-left: 60px;
+  padding: 12px 20px;
+  flex-grow: 1;
+  background-color: #ffffff;
+  min-height: calc(100vh - 50px);
+}
+
+/* 제목 */
+.app-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #3F51B5;
+}
+
+.text-box {
+  width: 90%;
+  height: 550px; /* 기존보다 더 크게 */
+  font-size: 1.1rem; /* 글씨도 살짝 키우기 */
+  padding: 12px;
+  resize: vertical; /* 사용자가 직접 크기 조절 가능하게 하려면 추가 */
+}
+
+/* 텍스트 박스 레이아웃 */
+.text-box-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* 텍스트 박스 */
+.text-box-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.text-area-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.text-area-label {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #3F51B5;
+  font-family: 'BMDOHYEON', sans-serif;
+}
+
+.text-box {
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #3F51B5;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 280px;
+  font-family: 'BMJUA', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow:
+    0 2px 6px #3F51B5;
+}
+
+/* 일시정지/재개/중지 버튼 공통 스타일 */
+.control-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+
+.control-btn {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(145deg, #7986cb, #3F51B5);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.control-btn:hover {
+  background: linear-gradient(145deg, #5c6bc0, #7986cb);
+  box-shadow:
+    0 0 12px #7986cb,
+    0 0 30px #9fa8da,
+    0 0 40px #c5cae9,
+    0 0 50px #e8eaf6;
+  transform: translateY(-3px) scale(1.05);
+  color: #fff;
+  text-shadow: 0 0 12px #c5cae9;
+}
+
+.control-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* made by 텍스트 */
+.made-by {
+  margin-left: 60px;
+  font-size: 12px;
+  color: #666;
+  padding: 6px 20px;
+  user-select: none;
+}
+
+/* 새로 추가한 hover 효과 버튼 공통 클래스 */
+.hover-effect-button {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hover-effect-button:hover {
+  color: #5c6bc0 !important;
+  text-shadow: 0 0 8px #5c6bc0;
+  transform: scale(1.1);
+}
+
+/* 프로필 카드 */
+.profile-card {
+  max-width: 500px;
+  width: 90%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+  
+  /* 여기서 테두리 추가 */
+  border: 2px solid #3F51B5;  /* 진한 파란색 테두리 */
+}
+
+.profile-item {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #333;
+  display: flex;
+  align-items: center; /* 수평 가운데 정렬 */
+  gap: 20px;           /* 라벨과 값 사이 간격 */
+  font-weight: 500;
+}
+
+
+.profile-label {
+  width: 100px;        /* 고정 너비로 맞춤 */
+  font-weight: 700;
+  color: #3F51B5;
+  text-align: left;    /* 왼쪽 정렬 */
+}
+
+
+/* 환경설정 콘텐츠 */
+.settings-content {
+  background-color: #f9f9f9;
+  border: 1px solid #3F51B5;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: inset 0 0 6px #3F51B5;
+  color: #333;
+  margin-top: 12px;
+}
+
+.settings-content h3 {
+  color: #3F51B5;
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.settings-content p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* 리스트 예시 스타일 (있을 경우) */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f9f9f9;
+  border: 1px solid #3F51B5;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  transition: background 0.3s ease;
+}
+
+li:hover {
+  background: #e8eaf6;
+  color: #3F51B5;
+  text-shadow: 0 0 6px #3F51B5;
+}
+
+.file-name {
+  color: #3F51B5;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.file-name:hover {
+  color: #303f9f;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+}
